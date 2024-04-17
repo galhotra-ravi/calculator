@@ -1,6 +1,6 @@
 let AC = document.querySelector(".AC");
 let answerBoxContainer = document.querySelector(".answerBox")
-let answerBox = document.querySelector(".answerBox input");
+let answerBox = document.querySelector(".answerBox textarea");
 let equalBtn = document.querySelector("#equalBtn");
 let values = document.querySelectorAll(".values");
 let clear = document.querySelector(".clear");
@@ -31,13 +31,20 @@ for (let val of values) {
   val.addEventListener("click", () => {
     answerBox.value = answerBox.value + val.innerText;
     answerBox.focus();
-    answerBox.setSelectionRange(answerBox.value.length, answerBox.value.length);
+    // answerBox.setSelectionRange(answerBox.value.length, answerBox.value.length);
   });
 }
+
 
 answerBoxContainer.addEventListener("click", () => {
   answerBox.focus();
 })
+
+answerBox.addEventListener("keydown", (evt) => {
+  if (evt.key == "Enter") {
+    evt.preventDefault();
+  }
+});
 
 window.onload = () => {
   answerBox.focus();
@@ -48,3 +55,11 @@ window.onload = () => {
       }
   });
 };
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth <= 600) {
+      answerBox.setAttribute('disabled', 'disabled');
+    } else {
+      textarea.removeAttribute('disabled');
+  }
+});
