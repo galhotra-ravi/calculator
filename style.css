@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background-color: #a0d7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.container {
+    width: 350px;
+    height: 600px;
+    background-color: #101f2a;
+    border-radius: 30px;
+}
+
+.answerBox {
+    height: 125px;
+    width: 310px;
+    margin: 20px;
+    border: 2px solid rgba(160, 215, 255, 0.2);
+    position: relative;
+    border-radius: 20px;
+}
+
+.answerBox:hover{
+    cursor: text;
+}
+
+.answerBox input {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-radius: 20px;
+    font-size: 2rem;
+    text-align: end;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    padding: 0px 10px 0px 10px;
+}
+
+.roundButtons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button {
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-size: 16px;
+    background-color: #303136;
+    color: #19acff;
+}
+
+.squareButtons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
+
+
+.squareBtn {
+    height: 60px;
+    width: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.zeroBtn {
+    height: 60px;
+    width: 140px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.grey {
+    background-color: #606060;
+    color: white;
+    font-size: 20px;
+}
+
+.darkBlue {
+    background-color: #005db2;
+    font-size: 26px;
+}
+
+.darkGrey {
+    background-color: #303136;
+    color: #19acff;
+    font-size: 26px;
+}
+
+.button:hover,
+.squareBtn:hover,
+.zeroBtn:hover,
+.plusBtn:hover,
+.equalBtn:hover {
+    cursor: pointer;
+    background-color: rgba(6, 255, 31, 0.113);
+}
